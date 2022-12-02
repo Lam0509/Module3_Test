@@ -1,4 +1,4 @@
-const connection = require("../Config/DBConfig");
+const connection = require("../Model/DBConnect");
 const fs = require("fs");
 
 class BaseController {
