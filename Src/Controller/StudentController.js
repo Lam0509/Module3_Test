@@ -84,7 +84,7 @@ class StudentController extends BaseController {
         let getStudent = `select *
                           from student where Id = '${Id}'`;
         let student = await this.querySQL(getStudent);
-        let getClasses = `select name from class`;
+        let getClasses = `select name from class where name <> "${student[0].class}"`;
         let classes = await this.querySQL(getClasses);
         let html = '';
         html += `<option value="${student[0].class}">${student[0].class}</option>`;
